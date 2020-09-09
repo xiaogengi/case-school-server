@@ -54,7 +54,13 @@ public class SchoolServiceImpl implements ISchoolService {
 
     @Override
     public Response queryById(SchoolDTO schoolDTO) {
-        return null;
+        try {
+            SchoolDTO result = schoolMapper.queryById(schoolDTO);
+            return Response.build(result);
+        } catch (Exception e){
+            log.error("SchoolServiceImpl -->> queryById error[{}]", e);
+            return Response.build(CodeEnum.SERVER_ERROR);
+        }
     }
 
     @Override

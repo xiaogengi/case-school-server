@@ -20,4 +20,7 @@ public interface SchoolMapper {
 
     @Select("select * from ca_school")
     List<SchoolDTO> query(@Param("param") SchoolDTO schoolDTO);
+
+    @Select("select * from ca_school where id = #{param.id}")
+    SchoolDTO queryById(@Param("param") SchoolDTO schoolDTO);
 }
