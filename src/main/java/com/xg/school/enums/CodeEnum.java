@@ -9,7 +9,11 @@ package com.xg.school.enums;
 public enum  CodeEnum {
     SUCCESS(10000, "success"),
     FAILED(20000, "failed"),
-    SERVER_ERROR(50000, "系统繁忙!")
+    SERVER_ERROR(50000, "系统繁忙!"),
+
+
+    FILE_TYPE_FAILED(70001, "该文件不是文件夹，请选择其他操作！"),
+    DIR_NULL_FAILED(70002, "文件夹下暂无文件")
     ;
 
 
